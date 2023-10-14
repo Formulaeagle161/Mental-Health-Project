@@ -60,16 +60,19 @@ function counseleeJoinChat(id){
   console.log('joined chat',id)
   document.getElementById('messagediv').style.display = 'block'
 
-  document.getElementById('send').onclick = (e)=>{
+  document.getElementById('messagebox').oninput = (e)=>{
     let val = document.getElementById('messagebox').value
 
-    if (val != ''){
-      userCounseleeChat.messages[userCounseleeChat.messagePlace] = 'Counselee: ' + val
-      userCounseleeChat.messagePlace += 1
-      set(ref(db,'chats/'+id),userCounseleeChat)
-      document.getElementById('messagebox').value = ''  
+    if (val.includes('\n')){
+      if (val.replace('\n','').length > 0){
+        userCounseleeChat.messages[userCounseleeChat.messagePlace] = 'Counselee: ' + val
+        userCounseleeChat.messagePlace += 1
+        set(ref(db,'chats/'+id),userCounseleeChat)
+        document.getElementById('messagebox').value = ''    
+      }
     }
   }
+
 
   counseleeQueryForCounselor()
 }
@@ -159,14 +162,16 @@ function counselorJoinChat(chatKey){
   console.log('joined chat',chatKey)
   document.getElementById('messagediv').style.display = 'block'
 
-  document.getElementById('send').onclick = (e)=>{
+  document.getElementById('messagebox').oninput = (e)=>{
     let val = document.getElementById('messagebox').value
 
-    if (val != ''){
-      userCounselorChat.messages[userCounselorChat.messagePlace] = 'Counselor: ' + val
-      userCounselorChat.messagePlace += 1
-      set(ref(db,'chats/'+chatKey),userCounselorChat)
-      document.getElementById('messagebox').value = ''  
+    if (val.includes('\n')){
+      if (val.replace('\n','').length > 0){
+        userCounselorChat.messages[userCounselorChat.messagePlace] = 'Counselor: ' + val
+        userCounselorChat.messagePlace += 1
+        set(ref(db,'chats/'+chatKey),userCounselorChat)
+        document.getElementById('messagebox').value = ''    
+      }
     }
   }
 

@@ -9,8 +9,17 @@
 <body>
     <h1>Quick Chat</h1>
 
-    <button onclick="counseleeInit()">I'm depressed</button>
-    <button onclick="counselorInit()">I'm a counselor</button>
+    <button id="counseleeButton">I'm depressed</button>
+    <button id="counselorButton">I'm a counselor</button>
+
+    <div id="messagediv">
+        <textarea id="messagebox"></textarea>
+        <button id="send">Send</button>
+    </div>
+
+    <ul id="messageslist">
+        
+    </ul>
 
     <script type="module" src="/quickchat/quickchat.js"></script>
 </body>

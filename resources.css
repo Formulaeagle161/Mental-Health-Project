@@ -16,7 +16,7 @@
   .centered-text {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 50%;
     transform: translate(-50%, -50%);
     color:rgb(0, 0, 0); 
@@ -26,7 +26,7 @@
   .centered-text3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     color:rgb(4, 8, 61); 

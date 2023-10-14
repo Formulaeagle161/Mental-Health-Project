@@ -49,20 +49,13 @@ body {
   height: auto;
   display: block;
 }
-#minititle {
+.minititle {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 2rem;
   color:black;
   padding: 2  px;
 }
-#summary {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #005068;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 0; 
-    text-align: center; 
-}
+
 .centered-text {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   position: absolute;
@@ -94,20 +87,43 @@ body {
   padding: 10px; 
 }
 .grid-container {
+  border: 1px;
   display: grid;
   grid-template-columns: auto auto;
-  gap: 5px;
+  gap: 2px;
   background-color: #000000;
-  padding: 10px;
+  padding: 5px;
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: darkcyan;
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+  padding: 10px 0;
 }
 .item1 {
   grid-column-start: 1;
   grid-column-end: 2;
+  background-color: darkcyan;
+  font-size: larger; 
 }
+#summary2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #005068;
+  font-size: larger; 
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 0; 
+  
+  text-align: center;
+}
+.summary {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #005068;
+  color: lightblue;
+  padding: 10px;
+  border-radius: 0; 
+  text-align: center;
+  font-size: larger; 
+}
+
+

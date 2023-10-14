@@ -65,3 +65,24 @@ h1 {
     background-color:darkgray;
     cursor: pointer;
 }
+#messagediv {
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    height: 5%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    background-color: #005068;
+    
+
+}
+
+#messagebox {
+    border-radius: 10px;
+    width: 20%;
+    height: 120%;
+    background-color:lightblue;
+    display: inline-block;
+
+}

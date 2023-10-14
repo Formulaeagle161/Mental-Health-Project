@@ -1,3 +1,67 @@
 #messagediv{
     display: none;
 }
+#topbar {
+    background-color: #073746;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0; 
+    text-align: center;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 100; 
+}
+#topbartext {
+    padding: 0px;
+    font-size: 1.45rem;
+    color: white;
+    justify-content: space-around;
+    list-style-type: none;
+    display: flex;
+}
+a {
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+a:hover{
+    text-decoration: underline;
+}
+body {
+    margin: 70px 0 0; 
+    background-color: #005068;
+}
+h1 {
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 56px;
+}
+#grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    background-color: #000000;
+    padding: 10px;
+}
+  
+#grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    background-color: #073746;
+}
+.grid-item > button {
+    background-color:gray;
+    font-size: 24px;
+    padding: 25px;
+    border-radius: 10px;
+}
+.grid-item > button:hover {
+    background-color:darkgray;
+    cursor: pointer;
+}

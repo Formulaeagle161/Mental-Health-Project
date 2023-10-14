@@ -7,10 +7,26 @@
     <link rel="stylesheet" href="quickchat.css" />
 </head>
 <body>
+    
+    <div id = "topbar">
+        <div id = "topbartext">
+          <ln><a href="/index.html">Home</a></ln> 
+          <ln><a href="/Resources.html">Resources</a></ln>
+          <ln><a href="/quickchat/index.html"><span style="color:aqua">Quick Chat</span></a></ln>
+          <ln><a href="/Contact.html">Contact</a></ln>
+          <ln><a href="/About.html">About</a></ln>
+        </div>
+      </div>    
+    
     <h1>Quick Chat</h1>
-
-    <button id="counseleeButton">I'm depressed</button>
-    <button id="counselorButton">I'm a counselor</button>
+    <div id="grid-container">
+        <div class="grid-item">
+            <button id="counseleeButton">I'm depressed</button>
+        </div>
+        <div class="grid-item">
+            <button id="counselorButton">I'm a counselor</button>    
+        </div>
+    </div>
 
     <div id="messagediv">
         <textarea id="messagebox"></textarea>

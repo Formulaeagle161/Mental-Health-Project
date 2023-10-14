@@ -34,12 +34,11 @@ body {
     background-color: #005068;
 }
 h1 {
-    color:white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    font-size: 56px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(4, 8, 61); 
+    font-size: 80px; 
+    padding: 10px; 
 }
 #grid-container {
     display: grid;
@@ -84,5 +83,24 @@ h1 {
     height: 120%;
     background-color:lightblue;
     display: inline-block;
+
+}
+#messagelistdiv{
+    position: absolute;
+    display: none;
+    background-color: gray;
+    width:50%;
+    height:50%;
+    left:25%;
+    border-radius: 25px;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+ul {
+    list-style-type: none;
+  }
+.msg{
+    font-size: 24px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 }

@@ -59,6 +59,8 @@ function counseleeJoinChat(id){
   })
   console.log('joined chat',id)
   document.getElementById('messagediv').style.display = 'block'
+  document.getElementById('messagelistdiv').style.display = 'block'
+
 
   document.getElementById('messagebox').oninput = (e)=>{
     let val = document.getElementById('messagebox').value
@@ -96,7 +98,7 @@ function counseleeChatUpdated(){
 
   for (let message in userCounseleeChat.messages){
     if (message != '0'){
-      document.getElementById('messageslist').innerHTML += `<li>${userCounseleeChat.messages[message]}</li>`
+      document.getElementById('messageslist').innerHTML += `<li style="text-align: ${userCounseleeChat.messages[message].split(':')[0] == 'Counselee' ? 'right' : 'left'};"><p class="msg">${userCounseleeChat.messages[message]}</p></li>`
     }
   }
 }
@@ -161,6 +163,8 @@ function counselorJoinChat(chatKey){
   })
   console.log('joined chat',chatKey)
   document.getElementById('messagediv').style.display = 'block'
+  document.getElementById('messagelistdiv').style.display = 'block'
+
 
   document.getElementById('messagebox').oninput = (e)=>{
     let val = document.getElementById('messagebox').value
@@ -183,7 +187,7 @@ function counselorChatUpdated(){
 
   for (let message in userCounselorChat.messages){
     if (message != '0'){
-      document.getElementById('messageslist').innerHTML += `<li>${userCounselorChat.messages[message]}</li>`
+      document.getElementById('messageslist').innerHTML += `<li style="text-align: ${userCounselorChat.messages[message].split(':')[0] == 'Counselor' ? 'right' : 'left'};"><p class="msg">${userCounselorChat.messages[message]}</p></li>`
     }
   }
 }

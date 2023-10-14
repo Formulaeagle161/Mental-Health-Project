@@ -33,3 +33,21 @@
     font-size: 30px; 
     padding: 10px; 
   }
+  .resourcelist {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #005068;
+    color: lightblue;
+    padding: 10px;
+    border-radius: 0; 
+    text-align: left;
+    font-size: larger; 
+  }
+  .minititle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    color:black;
+    padding: 10  px;
+    
+  }
+  
+  

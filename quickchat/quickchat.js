@@ -103,6 +103,10 @@ function counseleeChatUpdated(){
   if (userCounseleeChat.counselor){
     document.getElementById('status').innerHTML = 'Status: chat in session, talk away!'
   }
+  if (userCounseleeChat.done){
+    alert('chat ended')
+    location.href = location.href
+  }
 
   document.getElementById('messageslist').innerHTML = ''
 
@@ -127,9 +131,9 @@ let userCounselorChat;
 function counselorInit(){
   userType = 'counselor'
   let key = prompt("Enter your counselor password: ")
-  document.getElementById("statusbox").style.display = 'block'
 
   if (key in counselors){
+    document.getElementById("statusbox").style.display = 'block'
     document.getElementById("grid-container").style.display = 'none'
     userCounselorKey = key
     userCounselorPath = 'counselors/'+userCounselorKey
@@ -206,11 +210,34 @@ function counselorJoinChat(chatKey){
 function counselorChatUpdated(){
   document.getElementById('messageslist').innerHTML = ''
 
+  if (userCounselorChat.done){
+    userCounselor.currentChat = 'none'
+    userCounselor.available = false
+    userCounselor.online = false
+    set(ref(db,'counselors/'+userCounselorKey),userCounselor)
+    alert('chat ended')
+    location.href = location.href
+  }
+
   for (let message in userCounselorChat.messages){
     if (message != '0'){
       let isCounselor = userCounselorChat.messages[message].split(':')[0] == 'Counselor'
       document.getElementById('messageslist').innerHTML += `<li style="text-align: ${isCounselor ? 'right' : 'left'};"><p class="msg ${isCounselor ? "rightmsg" : ""}"><b>${userCounselorChat.messages[message]}</b></p></li>`
     }
     document.getElementById('messagelistdiv').scrollTop = document.getElementById('messagelistdiv').scrollHeight
+  }
+}
+
+window.onbeforeunload = function(e){
+  if (userType == 'counselor'){
+    userCounselorChat.done = true
+    set(ref(db,'chats/'+userCounselor.currentChat),userCounselorChat)
+    userCounselor.currentChat = 'none'
+    userCounselor.available = false
+    userCounselor.online = false
+    set(ref(db,'counselors/'+userCounselorKey),userCounselor)
+  }else if (userType == 'counselee'){
+    userCounseleeChat.done = true
+    set(ref(db,'chats/'+userCounseleeChatId),userCounseleeChat)
   }
 }

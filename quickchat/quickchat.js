@@ -39,6 +39,7 @@ function counseleeInit(){
   userType = 'counselee'
   let id = Math.floor(Math.random()*100000).toString()
   userCounseleeChatId = id
+  document.getElementById("grid-container").style.display = 'none'
 
   userCounseleeChat = {
     "user":id,
@@ -108,8 +109,9 @@ let userCounselorChat;
 function counselorInit(){
   userType = 'counselor'
   let key = prompt("Enter your counselor password: ")
-   
+
   if (key in counselors){
+    document.getElementById("grid-container").style.display = 'none'
     userCounselorKey = key
     userCounselorPath = 'counselors/'+userCounselorKey
     onValue(ref(db,userCounselorPath),(snapshot)=>{

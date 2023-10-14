@@ -79,11 +79,11 @@ h1 {
 
 #messagebox {
     border-radius: 10px;
-    width: 20%;
+    width: 40%;
     height: 120%;
     background-color:lightblue;
     display: inline-block;
-
+    font-size: 20px;
 }
 #messagelistdiv{
     position: absolute;
@@ -93,7 +93,8 @@ h1 {
     height:50%;
     left:25%;
     border-radius: 25px;
-    padding-left: 5px;
+    overflow-y: auto;
+
     padding-right: 10px;
 }
 ul {
@@ -102,5 +103,10 @@ ul {
 .msg{
     font-size: 24px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
+    overflow-wrap: anywhere;
+    width:50%;
+}
+.rightmsg{
+    padding-left: 50%;
+    width:50%;
 }

@@ -66,11 +66,14 @@ function counseleeJoinChat(id){
     let val = document.getElementById('messagebox').value
 
     if (val.includes('\n')){
-      if (val.replace('\n','').length > 0){
-        userCounseleeChat.messages[userCounseleeChat.messagePlace] = 'Counselee: ' + val
+      if (val.replaceAll('\n','').length > 0){
+        console.log(val,val.replaceAll('\n','').length)
+        userCounseleeChat.messages[userCounseleeChat.messagePlace] = 'Student: ' + val
         userCounseleeChat.messagePlace += 1
         set(ref(db,'chats/'+id),userCounseleeChat)
         document.getElementById('messagebox').value = ''    
+      }else{
+        document.getElementById('messagebox').value = val.replaceAll('\n','')
       }
     }
   }
@@ -98,8 +101,11 @@ function counseleeChatUpdated(){
 
   for (let message in userCounseleeChat.messages){
     if (message != '0'){
-      document.getElementById('messageslist').innerHTML += `<li style="text-align: ${userCounseleeChat.messages[message].split(':')[0] == 'Counselee' ? 'right' : 'left'};"><p class="msg">${userCounseleeChat.messages[message]}</p></li>`
+      let isStudent = userCounseleeChat.messages[message].split(':')[0] == 'Student'
+      document.getElementById('messageslist').innerHTML += `<li style="text-align: ${ isStudent ? 'right' : 'left'};"><p class="msg ${isStudent ? "rightmsg" : ""}"><b>${userCounseleeChat.messages[message]}</b></p></li>`    
     }
+    document.getElementById('messagelistdiv').scrollTop = document.getElementById('messagelistdiv').scrollHeight
+
   }
 }
 
@@ -170,11 +176,13 @@ function counselorJoinChat(chatKey){
     let val = document.getElementById('messagebox').value
 
     if (val.includes('\n')){
-      if (val.replace('\n','').length > 0){
+      if (val.replaceAll('\n','').length > 0){
         userCounselorChat.messages[userCounselorChat.messagePlace] = 'Counselor: ' + val
         userCounselorChat.messagePlace += 1
         set(ref(db,'chats/'+chatKey),userCounselorChat)
         document.getElementById('messagebox').value = ''    
+      }else{
+        document.getElementById('messagebox').value = val.replaceAll('\n','')
       }
     }
   }
@@ -187,7 +195,9 @@ function counselorChatUpdated(){
 
   for (let message in userCounselorChat.messages){
     if (message != '0'){
-      document.getElementById('messageslist').innerHTML += `<li style="text-align: ${userCounselorChat.messages[message].split(':')[0] == 'Counselor' ? 'right' : 'left'};"><p class="msg">${userCounselorChat.messages[message]}</p></li>`
+      let isCounselor = userCounselorChat.messages[message].split(':')[0] == 'Counselor'
+      document.getElementById('messageslist').innerHTML += `<li style="text-align: ${isCounselor ? 'right' : 'left'};"><p class="msg ${isCounselor ? "rightmsg" : ""}"><b>${userCounselorChat.messages[message]}</b></p></li>`
     }
+    document.getElementById('messagelistdiv').scrollTop = document.getElementById('messagelistdiv').scrollHeight
   }
 }

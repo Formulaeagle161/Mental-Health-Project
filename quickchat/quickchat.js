@@ -40,6 +40,8 @@ function counseleeInit(){
   let id = Math.floor(Math.random()*100000).toString()
   userCounseleeChatId = id
   document.getElementById("grid-container").style.display = 'none'
+  document.getElementById("statusbox").style.display = 'block'
+
 
   userCounseleeChat = {
     "user":id,
@@ -60,7 +62,7 @@ function counseleeJoinChat(id){
   console.log('joined chat',id)
   document.getElementById('messagediv').style.display = 'block'
   document.getElementById('messagelistdiv').style.display = 'block'
-
+  document.getElementById('status').innerHTML = 'Status: chat space created. Waiting for counselor...'
 
   document.getElementById('messagebox').oninput = (e)=>{
     let val = document.getElementById('messagebox').value
@@ -92,11 +94,16 @@ function counseleeQueryForCounselor(){
       c.currentChat = userCounseleeChatId
       set(ref(db,'counselors/'+counselor),c)
       set(ref(db,'chats/'+userCounseleeChatId),chatd)
+      document.getElementById('status').innerHTML = 'Status: chat in session, talk away!'
     }
   }
 }
 
 function counseleeChatUpdated(){
+  if (userCounseleeChat.counselor){
+    document.getElementById('status').innerHTML = 'Status: chat in session, talk away!'
+  }
+
   document.getElementById('messageslist').innerHTML = ''
 
   for (let message in userCounseleeChat.messages){
@@ -120,6 +127,7 @@ let userCounselorChat;
 function counselorInit(){
   userType = 'counselor'
   let key = prompt("Enter your counselor password: ")
+  document.getElementById("statusbox").style.display = 'block'
 
   if (key in counselors){
     document.getElementById("grid-container").style.display = 'none'
@@ -141,7 +149,11 @@ function counselorInit(){
       userCounselor.currentChat = chat.key
       set(ref(db,userCounselorPath),userCounselor)
       set(ref(db,'chats/'+chat.key),chatd)
+      document.getElementById('status').innerHTML = 'Status: joined chat! Talk away!'
       //counselorJoinChat(userCounselor.currentChat)
+    }else{
+      document.getElementById('status').innerHTML = 'Status: Waiting for an open chat...'
+
     }
   }
 }
@@ -159,6 +171,7 @@ function checkForOpenChats(){
 function userCounselorUpdated(){
   if (userCounselor.currentChat != 'none'){
     counselorJoinChat(userCounselor.currentChat)
+    document.getElementById('status').innerHTML = 'Status: chat in session, talk away!'
   }
 }
 

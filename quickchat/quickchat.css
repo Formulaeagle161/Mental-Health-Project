@@ -110,3 +110,13 @@ ul {
     padding-left: 50%;
     width:50%;
 }
+#statusbox{
+    position: relative;
+    display: none;
+    background-color: darkgray;
+    width: 25%;
+    left:37%;
+    padding: 0px;
+    top:-40px;
+    text-align: center;
+}

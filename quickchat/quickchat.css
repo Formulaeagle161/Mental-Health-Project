@@ -46,7 +46,7 @@ h4 {
     display: grid;
     grid-template-columns: auto auto;
     gap: 5px;
-    background-color: #000000;
+    background-color: #00000083;
     padding: 10px;
 }
   
@@ -54,7 +54,7 @@ h4 {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
-    background-color: #073746;
+    background-color: rgba(62, 87, 99, 0.466);
 }
 .grid-item > button {
     background-color:gray;
@@ -88,7 +88,7 @@ h4 {
 #messagelistdiv{
     position: absolute;
     display: none;
-    background-color: rgba(128,128,128,0.75);
+    background-color: rgba(94, 136, 138, 0.521);
     width:50%;
     height:40%;
     left:25%;
@@ -159,3 +159,10 @@ ul {
   #footertext a:hover {
     text-decoration: underline;
   }
+  li {
+  display: flex;
+  align-items: center;
+}
+li img {
+  margin-left: 10px; 
+}

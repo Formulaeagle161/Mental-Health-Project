@@ -74,7 +74,7 @@ window.onload = function(e){
     let val = document.getElementById('schoolselect').value
 
     document.getElementById('schoollink').href = schools[val]
-    document.getElementById('schoollink').innerHTML = schools[val]
+    document.getElementById('schoollink').innerHTML = "Click here to find your Counselor for " + schoolselect.value + "!" 
     console.log(schools[val])
 
 }
@@ -83,7 +83,7 @@ document.getElementById('schoolselect').oninput = function(e){
 
     document.getElementById('schoollink').href = schools[val]
 
-    document.getElementById('schoollink').innerHTML = schools[val]
+    document.getElementById('schoollink').innerHTML = "Click here to find your Counselor for " + schoolselect.value + "!" 
     console.log(schools[val])
 
 }

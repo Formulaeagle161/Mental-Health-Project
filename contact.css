@@ -65,10 +65,22 @@
     background-color: #006D75;
     color: white;
   }
-  #schoollink{
-    color:black;
-    text-align: center;
+  #schoolselect {
+    width: 10%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
-  #schoolselect{
-    text-align: center;
+  #schoollink {
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0070C0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
   }

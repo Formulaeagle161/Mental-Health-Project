@@ -32,12 +32,14 @@ a:hover{
 body {
     margin: 70px 0 0; 
     background-color: #005068;
+    background-image: url('/fadsf.jpg');
+    overflow-x: hidden;
 }
 h4 {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color:rgb(0, 0, 0); 
-    font-size: 80px; 
+    font-size: 70px; 
     padding: 10px; 
 }
 #grid-container {
@@ -65,14 +67,12 @@ h4 {
     cursor: pointer;
 }
 #messagediv {
-    position: fixed;
+    position: absolute;
     bottom: 5%;
     width: 100%;
     height: 5%;
-    background-color: #f1f1f1;
     padding: 10px;
     text-align: center;
-    background-color: #005068;
     
 
 }
@@ -80,7 +80,7 @@ h4 {
 #messagebox {
     border-radius: 10px;
     width: 40%;
-    height: 120%;
+    height: 100%;
     background-color:lightblue;
     display: inline-block;
     font-size: 20px;
@@ -88,9 +88,9 @@ h4 {
 #messagelistdiv{
     position: absolute;
     display: none;
-    background-color: gray;
+    background-color: rgba(128,128,128,0.75);
     width:50%;
-    height:50%;
+    height:40%;
     left:25%;
     border-radius: 25px;
     overflow-y: auto;
@@ -105,6 +105,7 @@ ul {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     overflow-wrap: anywhere;
     width:50%;
+    margin:0px;
 }
 .rightmsg{
     padding-left: 50%;
@@ -119,4 +120,42 @@ ul {
     padding: 0px;
     top:-40px;
     text-align: center;
+    border-radius: 10px;
 }
+
+
+#footer {
+    background-color: #073746;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #fff;
+    position: absolute;
+    top:100%;
+    width:100%;
+  }
+  
+  #footertext ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; 
+  }
+  
+  #footertext li {
+    margin: 0 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+  }
+  
+  #footertext a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  #footertext a:hover {
+    text-decoration: underline;
+  }

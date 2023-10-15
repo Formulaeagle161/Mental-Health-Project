@@ -65,3 +65,17 @@
     background-color: #006D75;
     color: white;
   }
+  .emailtable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #089b9b;
+  }
+  .emailtable th, .emailtable td {
+    border: 1px solid #156668;
+    padding: 8px;
+    text-align: left;
+  }
+  .emailtable th {
+    background-color: #0a5e5f;
+    color: white;
+  }

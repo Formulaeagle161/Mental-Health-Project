@@ -1,0 +1,90 @@
+.container {
+    height: 800px;
+    width: 100%;
+    background-image: url("wallpaperflare.com_wallpaper\ \(1\).jpg");
+    background-size: cover;
+  }
+  #content {
+    margin-top: -2%;
+  }
+  
+  #image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .centered-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(0, 0, 0); 
+    font-size: 80px; 
+    padding: 10px; 
+  }
+  .centered-text3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(4, 8, 61); 
+    font-size: 30px; 
+    padding: 10px; 
+  }
+  #emailtable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #emailtable td, #emailtable th {
+    border: 1px solid #0d8585; 
+    padding: 8px;
+  }
+  
+  #emailtable tr:nth-child(even) {
+    background-color: #04a5a5; 
+  }
+    
+  #emailtable tr:nth-child(odd) {
+  background-color: #089b9b; 
+
+  }
+  
+  
+  #emailtable tr:hover {
+    background-color: #004949;
+  }
+  
+  #emailtable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #054153;
+    color: rgb(255, 255, 255);
+  }
+  #schoolselect {
+    width: 10%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #schoollink {
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0070C0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .right {
+    text-align:right;
+  }

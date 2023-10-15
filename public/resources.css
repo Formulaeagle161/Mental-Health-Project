@@ -1,0 +1,53 @@
+.container {
+    height: 800px;
+    width: 100%;
+    background-image: url("oooo.jpg");
+    background-size: cover;
+  }
+  #content {
+    margin-top: -2%;
+  }
+  
+  #image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .centered-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(0, 0, 0); 
+    font-size: 80px; 
+    padding: 10px; 
+  }
+  .centered-text3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(4, 8, 61); 
+    font-size: 30px; 
+    padding: 10px; 
+  }
+  .resourcelist {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #005068;
+    color: lightblue;
+    padding: 10px;
+    border-radius: 0; 
+    text-align: left;
+    font-size: larger; 
+  }
+  .minititle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    color:black;
+    padding: 10  px;
+    
+  }
+  
+  

@@ -55,15 +55,15 @@
   
   
   #emailtable tr:hover {
-    background-color: #0dcccc;
+    background-color: #004949;
   }
   
   #emailtable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #006D75;
-    color: white;
+    background-color: #054153;
+    color: rgb(255, 255, 255);
   }
   #schoolselect {
     width: 10%;
@@ -83,4 +83,8 @@
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+  }
+
+  .right {
+    text-align:right;
   }

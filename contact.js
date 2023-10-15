@@ -111,8 +111,18 @@ window.onload = function(e){
 
     for (let email of emails){
         document.getElementById('emailtable').innerHTML += `<tr><th>${email.subject}</th><th><p>${email.body}</p>
-            <button onclick="navigator.clipboard.writeText(\`${email.body.replaceAll('<br>','\n')}\`)">
-                Copy Text
+            <button class = "right;" style = "font-family: Arial, Helvetica, sans-serif;
+            color:white;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #5fa1a3 ;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold; text-align:right" onclick="navigator.clipboard.writeText(\`${email.body.replaceAll('<br>','\n')}\`)">
+            
+            Copy Text
             </button>
         </th></tr>`
     }

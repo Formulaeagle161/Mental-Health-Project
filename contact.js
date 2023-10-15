@@ -66,6 +66,38 @@ let schools = {
     "Sherwood HS":"https://www2.montgomeryschoolsmd.org/schools/sherwoodhs/staff/directory/#Counseling",
     "Wheaton HS":"https://www2.montgomeryschoolsmd.org/schools/wheatonhs/admin/directory/#Counseling"
 }
+let emails = [
+    {'subject':'Feeling Overwhelmed','body':`Dear [Counselor's Name], <br>
+    <br>
+    I'm struggling a little bit and feeling overwhelmed. Can we please meet to talk about it? I could really use your guidance and support.<br>
+    <br>
+    Sincerely,<br>
+    [Your Name]
+    `},
+    {
+    'subject':'I Need To Talk','body':`Dear [Counselor's Name],<br>
+    <br>
+    I'm going through a tough time, and it is really taking its toll on me. I really need someone to talk to and seek guidance from. Can we meet?<br>
+    <br>
+    Sincerely,<br>
+    [Your Name]
+    `},
+    {'subject':'Going Through Something','body':`Hey [Counselor's Name],<br>
+    <br>
+    I've had a really tough time dealing with a loss recently. Can we chat sometime? I could use your help to get through this.<br>
+    <br>
+    Thanks,<br>
+    [Your Name]
+    `},
+    {'subject':'Can We Please Talk?','body':`Hi [Counselor's Name],<br>
+    <br>
+    I really need someone to talk to. Can we please set up a meeting?<br>
+    <br>
+    Thank you,<br>
+    [Your Name]
+    `}
+]
+
 
 for (let school in schools){
     document.getElementById("schoolselect").innerHTML += `<option value="${school}">${school}</option>`
@@ -77,7 +109,29 @@ window.onload = function(e){
     document.getElementById('schoollink').innerHTML = "Click here to find your Counselor for " + schoolselect.value + "!" 
     console.log(schools[val])
 
+    for (let email of emails){
+        document.getElementById('emailtable').innerHTML += `<tr><th>${email.subject}</th><th><p>${email.body}</p>
+            <button onclick="navigator.clipboard.writeText(\`${email.body.replaceAll('<br>','\n')}\`)">
+                Copy Text
+            </button>
+        </th></tr>`
+    }
+
 }
+function copy(subject) {
+    let text=''
+    for (let email of emails){
+        if (email.subject == subject){
+            text=email.body
+            break
+        }
+    }
+    navigator.clipboard.writeText(text);
+    
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied: " + copyText.value;
+  }
+  
 document.getElementById('schoolselect').oninput = function(e){
     let val = document.getElementById('schoolselect').value
 

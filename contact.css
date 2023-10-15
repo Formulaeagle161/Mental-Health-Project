@@ -33,32 +33,32 @@
     font-size: 30px; 
     padding: 10px; 
   }
-  #Counselors {
+  #emailtable {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
   }
   
-  #Counselors td, #Counselors th {
+  #emailtable td, #emailtable th {
     border: 1px solid #0d8585; 
     padding: 8px;
   }
   
-  #Counselors tr:nth-child(even) {
+  #emailtable tr:nth-child(even) {
     background-color: #04a5a5; 
   }
     
-  #Counselors tr:nth-child(odd) {
+  #emailtable tr:nth-child(odd) {
   background-color: #089b9b; 
 
   }
   
   
-  #Counselors tr:hover {
+  #emailtable tr:hover {
     background-color: #0dcccc;
   }
   
-  #Counselors th {
+  #emailtable th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;

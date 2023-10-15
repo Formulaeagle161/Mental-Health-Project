@@ -149,13 +149,15 @@ function counselorInit(){
     let chat = checkForOpenChats()
     if (chat.status == 1){
       let chatd = chat.data
-      chatd.counselor = userCounselorKey
-      userCounselor.available = false
-      userCounselor.currentChat = chat.key
-      set(ref(db,userCounselorPath),userCounselor)
-      set(ref(db,'chats/'+chat.key),chatd)
-      document.getElementById('status').innerHTML = 'Status: joined chat! Talk away!'
-      //counselorJoinChat(userCounselor.currentChat)
+      if (chat.key != 'none'){
+        chatd.counselor = userCounselorKey
+        userCounselor.available = false
+        userCounselor.currentChat = chat.key
+        set(ref(db,userCounselorPath),userCounselor)
+        set(ref(db,'chats/'+chat.key),chatd)
+        document.getElementById('status').innerHTML = 'Status: joined chat! Talk away!'
+        //counselorJoinChat(userCounselor.currentChat)  
+      }
     }else{
       document.getElementById('status').innerHTML = 'Status: Waiting for an open chat...'
 

@@ -33,10 +33,10 @@ body {
     margin: 70px 0 0; 
     background-color: #005068;
 }
-h1 {
+h4 {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:rgb(4, 8, 61); 
+    color:rgb(0, 0, 0); 
     font-size: 80px; 
     padding: 10px; 
 }

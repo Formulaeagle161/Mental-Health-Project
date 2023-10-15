@@ -81,6 +81,7 @@ function counseleeJoinChat(id){
   }
 
 
+
   counseleeQueryForCounselor()
 }
 

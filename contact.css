@@ -1,0 +1,67 @@
+.container {
+    height: 800px;
+    width: 100%;
+    background-image: url("wallpaperflare.com_wallpaper\ \(1\).jpg");
+    background-size: cover;
+  }
+  #content {
+    margin-top: -2%;
+  }
+  
+  #image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .centered-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(0, 0, 0); 
+    font-size: 80px; 
+    padding: 10px; 
+  }
+  .centered-text3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(4, 8, 61); 
+    font-size: 30px; 
+    padding: 10px; 
+  }
+  #Counselors {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #Counselors td, #Counselors th {
+    border: 1px solid #0d8585; 
+    padding: 8px;
+  }
+  
+  #Counselors tr:nth-child(even) {
+    background-color: #04a5a5; 
+  }
+    
+  #Counselors tr:nth-child(odd) {
+  background-color: #089b9b; 
+
+  }
+  
+  
+  #Counselors tr:hover {
+    background-color: #0dcccc;
+  }
+  
+  #Counselors th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #006D75;
+    color: white;
+  }
